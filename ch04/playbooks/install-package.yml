@@ -2,7 +2,7 @@
 - name: show return value of apt module
   hosts: server1
   gather_facts: False
-  become_method: sudo
+  sudo: True
   tasks:
     - name: install nginx
       apt: name=nginx
